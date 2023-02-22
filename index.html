@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo de Memória</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="media-queries.css" />
+
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="body-overlay hidden"></div>
+    <header>
+      <nav class="nav">
+        <div class="nav__logo">
+          <img class="nav__logo-img" src="imgs/LoL_icon.svg.png" alt="" />
+        </div>
+
+        <ul class="nav-list">
+          <li class="nav__list-item how-to">
+            <button class="nav__how-to-btn">Como Jogar?</button>
+            <div class="nav__how-to-play hidden">
+              <button class="how-to-close">X</button>
+              <p>
+                Escolha dois cards, se eles forem iguais você conseguiu uma
+                combinação! Ache todas para ganhar o jogo. <br />
+                Boa sorte!😃
+              </p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="game container">
+      <h1 class="heading">
+        <em> Jogo da Memória </em>
+      </h1>
+
+      <div class="grid"></div>
+
+      <div class="board-nav">
+        <div class="score">Erros: <span class="result">0</span></div>
+        <button class="reset">reset</button>
+      </div>
+
+      <div class="win-game play-again">
+        <p class="win-game__text">Parabéns você ganhou! 🎉🎉</p>
+        <img src="imgs/Lux_Emote.webp" alt="lux emote" />
+        <button class="reset win-game__text">Jogue de novo!</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>Projeto feito com fins educativos, sem associação a Riot Games</p>
+    </footer>
+  </body>
+</html>

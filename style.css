@@ -1,0 +1,296 @@
+/* colors */
+/* rgb(208, 168, 92) */
+/* #010101 */
+/* #fff */
+
+/* - Font sizes (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  font-weight: 400;
+  color: #010101;
+
+  height: 100%;
+
+  background-image: radial-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(19, 19, 19, 0.6)
+    ),
+    url("imgs/summonersrift-background.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  height: 16rem;
+  width: 16rem;
+
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NAVIGATION */
+.nav {
+  padding-left: 7.2rem;
+  padding-right: 7.2rem;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  border-bottom: 0.1rem solid #d0a85c;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  gap: 3.6rem;
+  font-size: 2.4rem;
+}
+
+.nav__logo-img {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+/* GRID AND GRID COMPONENTS */
+.heading {
+  justify-self: center;
+  padding-top: 3.2rem;
+  padding-bottom: 2.4rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 5.2rem;
+}
+
+.card {
+  /* background-color: aquamarine; */
+  transform-style: preserve-3d;
+  transition: transform 1.2s;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: min-content min-content min-content;
+
+  gap: 2.4rem;
+  perspective: 800px;
+
+  transition: all 0.3s ease-out;
+
+  border: 0.1rem solid #d0a85c;
+  padding: 2.4rem 1.2rem;
+  border-radius: 9px;
+}
+
+.matched {
+  box-shadow: inset 0 0 0 2px rgb(208, 168, 92);
+  border-radius: 9px;
+}
+
+.card__face {
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  position: relative;
+}
+
+.card__face--front {
+  position: absolute;
+
+  transform: rotateY(180deg);
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+/* GAME BUTTONS AND WIN SCREEN */
+.game {
+  position: relative;
+}
+
+.board-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.2rem;
+
+  position: absolute;
+  bottom: 40%;
+  left: -40%;
+}
+
+.score {
+  font-size: 3rem;
+  color: #d0a85c;
+  border: 0.3rem solid #d0a85c;
+
+  padding: 2.4rem 2.4rem;
+
+  border-radius: 9px;
+}
+
+.reset {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 500;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  color: #d0a85c;
+  /* Only necessary for .btn */
+  background: none;
+  border: 0.3rem solid #d0a85c;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.play-again {
+  font-size: 3rem;
+}
+
+.win-game {
+  display: flex;
+  flex-direction: column;
+  padding: 4.8rem;
+  gap: 2.4rem;
+  border: 0.3rem solid #d0a85c;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(208, 167, 92, 0.95);
+  border-radius: 9px;
+  position: absolute;
+
+  box-shadow: 0 0 60px 10px #111, 0 0 100px 10px #d0a85c, 0 0 140px 20px #d0a85c;
+
+  opacity: 0;
+
+  z-index: -1;
+
+  transition: all 0.3s;
+}
+
+.win-game__text {
+  color: #fff;
+  border-color: #111;
+  color: #111;
+}
+
+.overlay {
+  background-image: radial-gradient(
+      rgba(34, 34, 34, 0.9),
+      rgba(19, 19, 19, 0.8)
+    ),
+    url("imgs/summonersrift-background.jpg");
+}
+
+.nav__list-item {
+  position: relative;
+}
+
+.nav__how-to-btn {
+  display: inline-block;
+  text-decoration: none;
+
+  background-color: #111;
+  color: #fff;
+  border-bottom: 0.1rem solid transparent;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+.nav__how-to-play {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  border: 0.1rem solid #d0a85c;
+  font-size: 1.8rem;
+  width: 30rem;
+  padding: 2.4rem 2.4rem 3rem 2.4rem;
+  border-radius: 5px;
+  top: 150%;
+  right: 15%;
+  gap: 1rem;
+  line-height: 1.15;
+  z-index: 1000;
+}
+
+.how-to-close {
+  align-self: flex-end;
+  background-color: #111;
+  color: #fff;
+  border: 0.1rem solid #d0a85c;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.body-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* FOOTER */
+footer {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* HELPERS */
+.hidden {
+  display: none;
+}
+
+.pointer-none {
+  pointer-events: none;
+}

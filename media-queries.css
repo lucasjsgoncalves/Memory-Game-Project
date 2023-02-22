@@ -1,0 +1,85 @@
+/* DESKTOP E LAPTOPS */
+@media (max-width: 57rem) {
+  .board-nav {
+    position: initial;
+    flex-direction: row;
+  }
+
+  .reset,
+  .score {
+    font-size: 1.8rem;
+    padding: 1.8rem;
+  }
+
+  .win-game__text {
+    font-size: 3rem;
+  }
+  .game {
+    gap: 1.6rem;
+  }
+
+  footer {
+    margin-top: 2.4rem;
+  }
+}
+
+/* TABLETS */
+@media (max-width: 35rem) {
+  .nav {
+    padding: 0 3.2rem;
+  }
+
+  .nav__list-item {
+    font-size: 1.6rem;
+  }
+
+  .heading {
+    font-size: 2.4rem;
+  }
+
+  img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .win-game__text {
+    font-size: 2rem;
+  }
+
+  .reset {
+    font-size: 2rem;
+  }
+}
+
+/* SMALL TABLETS AND SMARTPHONES */
+@media (max-width: 25rem) {
+  img {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .nav__how-to-play {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* SMALLER PHONES (weird aspect ratios (eg. Galaxy Fold) */
+@media (max-width: 19rem) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .score,
+  .reset {
+    font-size: 1.2rem;
+  }
+
+  .win-game__text {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
